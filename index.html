@@ -2,7 +2,7 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Hello, AMPs</title>
+    <title>The personal website and blog of Jon Kuperman.</title>
     <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
@@ -17,12 +17,37 @@
       }
     </script>
     <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <style amp-custom>
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   </head>
   <body>
     <h1>Hi, my name is Jon. I work at Twitter as a web developer.</h1>
     <h2>I'm passionate about JavaScript, Accessibility and building delightful products.</h2>
-    <amp-img src="images/accessibility_talk_jquery_sf.png" height="480" width="855"></amp-img>
-    <amp-img src="images/accessibility_talk_empire_js.png" height="480" width="855"></amp-img>
+    <h3>Recent Article:</h3>
+    <div class="post">
+      <div class="post-AuthorInfo">
+        <amp-img src="images/jon_small.png" height="25" width="25"></amp-img>
+        <div class="authorInfo-date">May 07, 2015</div>
+      </div>
+      <h3 class="post-title">Hands on with Facebook's PathPicker</h3>
+      <div class="post-body">Facebook recently came out with a new tool called PathPicker. It's a command line utility that provides a nice UI you can pipe file names to.</div>
+    </div>
+    <h3>Recent Tweet:</h3>
+    <amp-twitter width=390 height=50
+      layout="responsive"
+      data-tweetid="562417697880035329">
+    </amp-twitter>
+    <h3>Recent Talks:</h3>
+    <amp-youtube
+        video-id="KqH5tpQUVvw"
+        width="480" height="270">
+    </amp-youtube>
+    <amp-youtube
+        video-id="bwGsP4MAxt8"
+        width="480" height="270">
+    </amp-youtube>
   </body>
 </html>
