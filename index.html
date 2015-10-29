@@ -18,36 +18,125 @@
     </script>
     <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
     <style amp-custom>
+    /* Reset CSS */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    	margin: 0;
+    	padding: 0;
+    	border: 0;
+    	font-size: 100%;
+    	font: inherit;
+    	vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    	display: block;
+    }
+    body {
+    	line-height: 1;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #333;
+      background-color: #FFFFFF;
+    }
+    ol, ul {
+    	list-style: none;
+    }
+    blockquote, q {
+    	quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    	content: '';
+    	content: none;
+    }
+    table {
+    	border-collapse: collapse;
+    	border-spacing: 0;
+    }
+    /* App specific styles */
+    h1, h2, h3, h4, h5 {
+      color: #777;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 400;
+      line-height: 1;
+      margin: 20px 0 10px;
+    }
+    h1 { font-size: 28px; }
+    h2 { font-size: 23px; }
+    h3 { font-size: 18px; }
+    .container {
+      max-width: 1020px;
+      min-width: 500px;
+      margin: 50px auto;
+    }
+    .post {
+      width: 500px;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+      padding: 25px;
+      box-sizing: border-box;
+    }
+    .post-AuthorInfo-img {
+      border-radius: 25px;
+      float: left;
+    }
+    .post-AuthorInfo-date {
+      color: #00C7CF;
+      text-indent: 10px;
+      line-height: 25px;
+    }
+    .post-title { font-weight: bold; }
+    .post-title a {
+      color: rgba(0, 0, 0, 0.8);
+    }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   </head>
   <body>
-    <h1>Hi, my name is Jon. I work at Twitter as a web developer.</h1>
-    <h2>I'm passionate about JavaScript, Accessibility and building delightful products.</h2>
-    <h3>Recent Article:</h3>
-    <div class="post">
-      <div class="post-AuthorInfo">
-        <amp-img src="images/jon_small.png" height="25" width="25"></amp-img>
-        <div class="authorInfo-date">May 07, 2015</div>
+    <div class="container">
+      <h1>Hi, my name is Jon. I work at Twitter as a web developer.</h1>
+      <h2>I'm passionate about JavaScript, Accessibility and building delightful products.</h2>
+      <h3>Recent Article:</h3>
+      <div class="post">
+        <div class="post-AuthorInfo">
+          <amp-img class="post-AuthorInfo-img" src="images/jon_small.png" height="25" width="25"></amp-img>
+          <div class="post-AuthorInfo-date">May 07, 2015</div>
+        </div>
+        <h3 class="post-title">
+          <a href="#">Hands on with Facebook's PathPicker</a>
+        </h3>
+        <div class="post-body">Facebook recently came out with a new tool called PathPicker. It's a command line utility that provides a nice UI you can pipe file names to.</div>
       </div>
-      <h3 class="post-title">Hands on with Facebook's PathPicker</h3>
-      <div class="post-body">Facebook recently came out with a new tool called PathPicker. It's a command line utility that provides a nice UI you can pipe file names to.</div>
+      <h3>Recent Tweet:</h3>
+      <amp-twitter width=390 height=50
+        layout="responsive"
+        data-tweetid="562417697880035329">
+      </amp-twitter>
+      <h3>Recent Talks:</h3>
+      <amp-youtube
+          video-id="KqH5tpQUVvw"
+          width="500" height="281">
+      </amp-youtube>
+      <amp-youtube
+          video-id="bwGsP4MAxt8"
+          width="500" height="281">
+      </amp-youtube>
     </div>
-    <h3>Recent Tweet:</h3>
-    <amp-twitter width=390 height=50
-      layout="responsive"
-      data-tweetid="562417697880035329">
-    </amp-twitter>
-    <h3>Recent Talks:</h3>
-    <amp-youtube
-        video-id="KqH5tpQUVvw"
-        width="480" height="270">
-    </amp-youtube>
-    <amp-youtube
-        video-id="bwGsP4MAxt8"
-        width="480" height="270">
-    </amp-youtube>
   </body>
 </html>
